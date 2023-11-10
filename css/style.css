@@ -9,6 +9,21 @@
       box-sizing: border-box;
   }
 
+:root {
+  --purple : rgb(123,31,162);
+  --violet : rgb(103,58,183);
+  --pink : rgb(244,143,177);
+}
+
+@keyframes background-pan {
+  from{
+    background-position: 0% center;
+  }
+  to{
+    background-position : -200% center;
+  }
+}
+
   /* *::-webkit-scrollbar {
   width: 12px;
 }
@@ -303,6 +318,40 @@
       font-weight:500;
       color: rgb(255, 255, 255,.8);
   }
+
+.mag {
+  animation: background-pan 3s linear infinite;
+  background : linear-gradient(
+    to right,
+    var(--purple),
+    var(--violet),
+    var(--pink),
+    var(--purple)
+  
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   .slash{
       animation-name: animateslash;
       animation-duration: .8s;
